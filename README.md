@@ -3,8 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
 ## Development server
+### Pre-requisites
+- Do NOT install `@angular/cli` or `typescript` globally to avoid version mismatch issues across multiple projects.
+- Run `npx @angular/cli new app-name --routing` to create a new Angular app with basic routing wired.
+- To run `ng` commands from within the project directory, preprend `npx` to commands, like `npx ng build`.
+- To continue using `ng` without having to prepend `npx`, configure shell autofallback as described here: https://www.npmjs.com/package/npx#shell-auto-fallback.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:5000/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
