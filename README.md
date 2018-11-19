@@ -1,4 +1,5 @@
 # OwezzyWeatherApp
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/owezzy/local-weather.svg?columns=all)](https://waffle.io/owezzy/local-weather) 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
@@ -11,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - To continue using `ng` without having to prepend `npx`, configure shell autofallback as described here: https://www.npmjs.com/package/npx#shell-auto-fallback.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:5000/`. The app will automatically reload if you change any of the source files.
+### openWeatherMap [api-key](https://openweathermap.org/api)
+- Online service made up of straightforward and user-friendly API sets for access to current weather data, forecasts and archives. You can also visit our website to find out about the weather in your location. As the data source, we use simulated climatic data, official meteorological services, data from airport weather stations and from private weather stations. 
 
 ## Code scaffolding
 
