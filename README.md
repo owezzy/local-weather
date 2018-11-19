@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
+Before you can continue, you need to sign up for a free OpenWeatherMap account and retrieve your own appid. You can read the documentation for appid at [Here](http://openweathermap.org/appid) for more detailed information.
 
 ## Code scaffolding
 
