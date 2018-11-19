@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
+
 ## Development server
 ### Pre-requisites
 - Do NOT install `@angular/cli` or `typescript` globally to avoid version mismatch issues across multiple projects.
