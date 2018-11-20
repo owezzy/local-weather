@@ -1,1 +1,1 @@
-From owezzy/local-weather:1.0.0
+FROM owezzy/local-weather:1.0.0
