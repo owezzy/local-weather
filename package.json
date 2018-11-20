@@ -18,6 +18,11 @@
     "trailingComma": "es5",
     "parser": "typescript"
   },
+  "config": {
+    "imageRepo": "owezzy/local-weather",
+    "imageName": "local-weather-app",
+    "imagePort": "7000"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.0.0",
