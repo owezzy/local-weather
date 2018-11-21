@@ -8,8 +8,13 @@
     </div>
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="66%"> <img [src]='current.image' style="zoom: 175%"></div>
-    <div class="mat-display-3 no-margin right" fxFlex>{{current.temperature | number:'1.0-0'}}&#8457;</div>
+  <div fxFlex="50%"> <img [src]='current.image' style="zoom: 175%"></div>
+    <div class="no-margin right" fxFlex>
+      <p class="mat-display-3">
+      {{current.temperature | number:'1.0-0'}}
+      <span class="mat-display-1 unit"> &#8457;</span>
+      </p>
+    </div>
   </div>
   <div fxLayoutAlign="center">
     <div class="mat-caption">
