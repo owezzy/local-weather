@@ -11,12 +11,14 @@ import { Component } from '@angular/core'
         <div style="text-align:center">Your City's Forecast, right now</div>
         <div fx-layout="row">
           <div fxFlex></div>
-          <div fxFlex="500px">
-            <mat-card>
-              <h2>Current Weather</h2>
+          <mat-card fxFlex="500px">
+            <mat-card-header>
+              <mat-card-title>Current Weather</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
               <app-current-weather></app-current-weather>
-            </mat-card>
-          </div>
+            </mat-card-content>
+          </mat-card>
           <div fxFlex></div>
         </div>
       </div>
