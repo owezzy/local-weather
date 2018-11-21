@@ -4,7 +4,7 @@
       {{current.city}},{{current.country}}
     </div>
     <div class="mat-subheading-2 no margin right" fxFlex>
-      {{ current.date | date:'EEEE MMM d'}}
+      {{ current.date | date:'EEEE MMM d'}}{{getOrdinal(current.date)}}
     </div>
   </div>
   <div fxLayout="row" fxLayoutAlign="center center">
