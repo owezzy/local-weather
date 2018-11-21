@@ -8,7 +8,9 @@ import { Component } from '@angular/core'
         <span>{{ title }}</span>
       </mat-toolbar>
       <div class="content-margin">
-        <div style="text-align:center">Your City's Forecast, right now</div>
+        <div fxLayoutAlign="center">
+          <div class="mat-caption">Your City's Forecast, right now</div>
+        </div>
         <div fx-layout="row">
           <div fxFlex></div>
           <mat-card fxFlex="500px">
