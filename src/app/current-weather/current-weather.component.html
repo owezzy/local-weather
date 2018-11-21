@@ -1,7 +1,11 @@
 <div *ngIf="current">
   <div fxLayout="row">
-  <div fxFlex="50%">{{current.city}},{{current.country}}</div>
-  <div class="right" fxFlex>{{ current.date | date:'fullDate'}}</div>
+    <div class="mat-title no-margin" fxFlex="50%">
+      {{current.city}},{{current.country}}
+    </div>
+    <div class="mat-subheading-2 no margin right" fxFlex>
+      {{ current.date | date:'EEEE MMM d'}}
+    </div>
   </div>
   <div fxLayout="row">
   <div fxFlex="66%"> <img [src]='current.image' ></div>
