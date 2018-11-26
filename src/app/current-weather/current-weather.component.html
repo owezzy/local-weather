@@ -1,13 +1,24 @@
 <div *ngIf="current">
-  <div>
-  <span>{{current.city}},{{current.country}}</span>
+  <div fxLayout="row">
+    <div class="mat-title no-margin" fxFlex="50%">
+      {{current.city}},{{current.country}}
+    </div>
+    <div class="mat-subheading-2 no margin right" fxFlex>
+      {{ current.date | date:'EEEE MMM d'}}{{getOrdinal(current.date)}}
+    </div>
   </div>
-  <div>
-    <span>{{ current.date | date:'fullDate'}}</span>
+  <div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="50%"> <img [src]='current.image' style="zoom: 175%"></div>
+    <div class="no-margin right" fxFlex>
+      <p class="mat-display-3">
+      {{current.temperature | number:'1.0-0'}}
+      <span class="mat-display-1 unit"> &#8457;</span>
+      </p>
+    </div>
   </div>
-  <div>
-    <img [src]='current.image' >
-    <span>{{current.temperature | number:'1.0-0'}}&#8457;</span>
-    {{current.description}}
+  <div fxLayoutAlign="center">
+    <div class="mat-caption">
+      {{current.description}}
+    </div>
   </div>
 </div>
