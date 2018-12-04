@@ -8,10 +8,11 @@ import { AppComponent } from './app.component'
 // third party imports
 import { CurrentWeatherComponent } from './current-weather/current-weather.component'
 import { MaterialModule } from './material.module'
-import { WeatherService } from './weather/weather.service'
+import { WeatherService } from './weather/weather.service';
+import { CitySearchComponent } from './city-search/city-search.component'
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherComponent],
+  declarations: [AppComponent, CurrentWeatherComponent, CitySearchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
