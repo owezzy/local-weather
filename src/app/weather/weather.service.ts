@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
+import { BehaviorSubject, Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { environment } from '../../environments/environment'
 import { ICurrentWeather } from '../intefaces'
@@ -21,10 +21,21 @@ interface ICurrentWeatherData {
   dt: number
   name: string
 }
-@Injectable({
-  providedIn: 'root',
-})
+export interface IWeatherService {
+  getCurrentWeather(search: string, country: string): Observable<ICurrentWeather>
+}
+
+@Injectable()
 export class WeatherService implements IWeatherService {
+  currentWeather = new BehaviorSubject<ICurrentWeather>({
+    city: '--',
+    country: '--',
+    date: Date.now(),
+    image: '',
+    temperature: 0,
+    description: '',
+  })
+
   constructor(private httpClient: HttpClient) {}
 
   getCurrentWeather(
@@ -63,7 +74,7 @@ export class WeatherService implements IWeatherService {
       city: data.name,
       country: data.sys.country,
       date: data.dt * 1000,
-      image: `http://openweathermap.org/img/w/${data.weather[0].icon}.png`,
+      image: `${environment.baseUrl}openweathermap.org/img/w/${data.weather[0].icon}.png`,
       temperature: this.convertKelvinToFarenheit(data.main.temp),
       description: data.weather[0].description,
     }
@@ -72,8 +83,4 @@ export class WeatherService implements IWeatherService {
   private convertKelvinToFarenheit(kelvin: number): number {
     return (kelvin * 9) / 5 - 459.67
   }
-}
-
-export interface IWeatherService {
-  getCurrentWeather(search: number | string, country: string): Observable<ICurrentWeather>
 }
