@@ -48,9 +48,8 @@ export class WeatherService implements IWeatherService {
     } else {
       uriParams = `zip=${search}`
     }
-
     if (country) {
-      uriParams = `${uriParams}, ${country}`
+      uriParams = `${uriParams},${country}`
     }
     return this.getCurrentWeatherHelper(uriParams)
   }
@@ -64,7 +63,7 @@ export class WeatherService implements IWeatherService {
     return this.httpClient
       .get<ICurrentWeatherData>(
         `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?` +
-          `q=${uriParams}&appid=${environment.appId} `
+          `${uriParams}&appid=${environment.appId}`
       )
       .pipe(map(data => this.transformToIcurrentWeather(data)))
   }
